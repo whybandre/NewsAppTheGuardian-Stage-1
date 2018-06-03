@@ -101,7 +101,7 @@ public class QueryUtils {
 
             // If the request was successful (response code 200),
             // then read the input stream and parse the response.
-            if (urlConnection.getResponseCode() == 200) {
+            if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {
@@ -159,16 +159,16 @@ public class QueryUtils {
             for (int i = 0; i < resultsArray.length(); i++) {
                 JSONObject currentResults = resultsArray.getJSONObject(i);
 
-                String Title = currentResults.getString("webTitle");
-                String category = currentResults.getString("sectionName");
-                String date = currentResults.getString("webPublicationDate");
+                String Title = currentResults.optString("webTitle");
+                String category = currentResults.optString("sectionName");
+                String date = currentResults.optString("webPublicationDate");
                 date = formatDate(date);
-                String url = currentResults.getString("webUrl");
+                String url = currentResults.optString("webUrl");
                 JSONArray tagsAuthor = currentResults.getJSONArray("tags");
                 String author="";
                 if (tagsAuthor.length()!= 0) {
                     JSONObject currentTagsAuthor = tagsAuthor.getJSONObject(0);
-                    author = currentTagsAuthor.getString("webTitle");
+                    author = currentTagsAuthor.optString("webTitle");
                 }else{
                     author = " ";
                 }
@@ -179,8 +179,6 @@ public class QueryUtils {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        // Return the list of earthquakes
         return newsList;
     }
 }

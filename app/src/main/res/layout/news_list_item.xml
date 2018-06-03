@@ -29,20 +29,20 @@
                 android:id="@+id/section_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Word Cup" />
+                tools:text="@string/placeholder_section" />
 
             <TextView
                 style="@style/title_article"
                 android:id="@+id/title_article"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Headline Portugal - Spain"
+                tools:text="@string/placeholder_title"
                 android:textColor="@color/colorHeading"/>
 
             <TextView
                 style="@style/author_name"
                 android:id="@+id/author_name"
-                tools:text="Bruno Andre"
+                tools:text="@string/placeholder_author"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_below="@id/title_article"/>
@@ -50,7 +50,7 @@
             <TextView
                 style="@style/date_published"
                 android:id="@+id/date_published"
-                tools:text="Jun 2, 2018"
+                tools:text="@string/placeholder_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>

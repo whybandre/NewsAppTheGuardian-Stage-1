@@ -11,11 +11,8 @@ import java.util.List;
  */
 public class NewsLoader extends AsyncTaskLoader<List<News>> {
 
-    /** Query URL */
-    private String mUrl;
-
-    private static String REQUEST_URL =
-            "https://content.guardianapis.com/search?show-tags=contributor&api-key=a516fa85-76f1-4766-9a02-47ed5778679d";
+    String apiKey = BuildConfig.THE_GUARDIAN_API_KEY;
+    private String REQUEST_URL = "https://content.guardianapis.com/search?show-tags=contributor&api-key=" + apiKey;
 
     /**
      * Constructs a new {@link NewsLoader}.

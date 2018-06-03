@@ -32,11 +32,6 @@ public class NewsActivity extends AppCompatActivity
     /** SwipeRefreshLayout for refresh and load more new news */
     private SwipeRefreshLayout swipe;
 
-    public static final int NEWS_LOADER_ID = 1;
-    /** URL for earthquake data from the USGS dataset     */
-    private static final String GUARDIAN_REQUEST_URL =
-            "https://content.guardianapis.com/search?show-tags=contributor&api-key=a516fa85-76f1-4766-9a02-47ed5778679d";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +56,7 @@ public class NewsActivity extends AppCompatActivity
             newsListView.setAdapter(mAdapter);
 
             // Set an item click listener on the ListView, which sends an intent to a web browser
-            // to open a website with more information about the selected earthquake.
+            // to open a website
             newsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
@@ -102,7 +97,7 @@ public class NewsActivity extends AppCompatActivity
                 loadingIndicator.setVisibility(View.GONE);
 
                 // Update empty state with no connection error message
-                mEmptyStateTextView.setText(R.string.internet_error_messages);
+                mEmptyStateTextView.setText(R.string.no_internet_connection);
             }
         }
 
@@ -118,14 +113,10 @@ public class NewsActivity extends AppCompatActivity
             View loadingIndicator = findViewById(R.id.loading_indicator);
             loadingIndicator.setVisibility(View.GONE);
 
-            // Set empty state text to display "No earthquakes found."
-            mEmptyStateTextView.setText(R.string.connection_error_messages);
+            mEmptyStateTextView.setText(R.string.no_news);
 
-            // Clear the adapter of previous earthquake data
             mAdapter.clear();
 
-            // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
-            // data set. This will trigger the ListView to update.
             if (news != null && !news.isEmpty()) {
                 mAdapter.addAll(news);
             }
@@ -137,12 +128,15 @@ public class NewsActivity extends AppCompatActivity
             mAdapter.clear();
         }
 
-        //Limit time for refreshing circle
-    @Override public void onRefresh() {
-        new Handler().postDelayed(new Runnable() {
-            @Override public void run() {
-                swipe.setRefreshing(false);
-            }
-        }, 5000);
-    }
+        //Call .restartLoader() method to fetch news data with swipe
+        @Override
+        public void onRefresh() {
+            getLoaderManager().restartLoader(0, null, this);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    swipe.setRefreshing(false);
+                }
+            }, 5000);
+        }
     }
