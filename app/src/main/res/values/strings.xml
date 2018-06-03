@@ -9,4 +9,51 @@
     <string name="placeholder_author">Bruno Andre</string>
     <string name="placeholder_date">Jun 2, 2018</string>
 
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">News Settings</string>
+
+    <!-- Strings For Number of News displayed Preference [CHAR LIMIT=30] -->
+    <string name="settings_num_news_displayed_label">Display News (1 &#8211; 50) </string>
+    <string name="settings_num_news_displayed_key" translatable="false">min_news</string>
+    <string name="settings_num_news_displayed_default" translatable="false">0</string>
+
+    <!-- Strings For Order-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_newest_news_value</string>
+
+    <string name="settings_order_by_newest_news_label">Newest (default)</string>
+    <string name="settings_order_by_newest_news_value" translatable="false">newest</string>
+
+    <string name="settings_order_by_oldest_news_label">Oldest</string>
+    <string name="settings_order_by_oldest_news_value" translatable="false">oldest</string>
+
+    <string name="settings_order_by_relevance_news_label">Relevance</string>
+    <string name="settings_order_by_relevance_news_value" translatable="false">relevance</string>
+
+    <!-- Strings For Section Preference [CHAR LIMIT=30] -->
+    <string name="settings_section_label">Section</string>
+    <string name="settings_section_news_key" translatable="false">section</string>
+    <string name="settings_section_news_default" translatable="false">@string/settings_section_all_news_value</string>
+
+    <string name="settings_section_all_news_label">All</string>
+    <string name="settings_section_all_news_value" translatable="false"></string>
+
+    <string name="settings_section_world_news_label">World</string>
+    <string name="settings_section_world_news_value" translatable="false">world</string>
+
+    <string name="settings_section_business_news_label">Business</string>
+    <string name="settings_section_business_value" translatable="false">business</string>
+
+    <string name="settings_section_sport_news_label">Sport</string>
+    <string name="settings_section_sport_news_value" translatable="false">sport</string>
+
+    <string name="settings_section_football_news_label">Football</string>
+    <string name="settings_section_football_news_value" translatable="false">football</string>
+
+    <string name="settings_section_culture_label">Culture</string>
+    <string name="settings_section_culture_value" translatable="false">culture</string>
+
+    <string name="settings_section_music_news_label">Music</string>
+    <string name="settings_section_music_value" translatable="false">music</string>
 </resources>
