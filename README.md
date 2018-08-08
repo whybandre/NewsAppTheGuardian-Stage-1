@@ -1,6 +1,8 @@
 # NewsAppTheGuardian @ Stage 1 & Stage 2
 A News App for TheGuardian – organized in two stages,
 
+# NewsAppTheGuardian @ Stage
+
 The one presented is on stage 1. To change to stage 2 go to “Branch:Master” and select Stage-2.
 
 ##`STAGE-1` = Master branch
