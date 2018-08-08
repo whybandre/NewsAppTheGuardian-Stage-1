@@ -3,8 +3,8 @@ A News App for TheGuardian – organized in two stages,
 
 The one presented is on stage 1. To change to stage 2 go to “Branch:Master” and select Stage-2.
 
-##STAGE-1 = Master branch
-##STAGE-2 = Stage-2 branch
+##`STAGE-1` = Master branch
+##`STAGE-2` = Stage-2 branch
 
 ## Intro
 A project were the goal was to create app that present the last news from the Guardian while using their API
@@ -20,11 +20,11 @@ https://www.itsnicethat.com/articles/guardian-brand-guidelines
 
 ## **Screenshots Portrait Version**
 
-<img src=" https://github.com/whybandre/NewsAppTheGuardian-Stage-1/blob/master/NewsAppTheGuardian-preview-1.png" 
-data-canonical-src=" https://github.com/whybandre/NewsAppTheGuardian-Stage-1/blob/master/NewsAppTheGuardian-preview-1.png" 
+<img src="https://github.com/whybandre/NewsAppTheGuardian-Stage-1/blob/master/NewsAppTheGuardian-preview-1.png" 
+data-canonical-src="https://github.com/whybandre/NewsAppTheGuardian-Stage-1/blob/master/NewsAppTheGuardian-preview-1.png" 
 width="440" height="727" /> 
-<img src=" https://github.com/whybandre/NewsAppTheGuardian-Stage-1/blob/master/NewsAppTheGuardian-preview-2.png" 
-data-canonical-src=" https://github.com/whybandre/NewsAppTheGuardian-Stage-1/blob/master/NewsAppTheGuardian-preview-2.png" 
+<img src="https://github.com/whybandre/NewsAppTheGuardian-Stage-1/blob/master/NewsAppTheGuardian-preview-2.png" 
+data-canonical-src="https://github.com/whybandre/NewsAppTheGuardian-Stage-1/blob/master/NewsAppTheGuardian-preview-2.png" 
 width="440" height="727" /> 
 
 
